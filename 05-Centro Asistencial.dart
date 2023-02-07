@@ -4,6 +4,13 @@ void main(List<String> args) {
   //Ingresando Cantidad de lisiados
   print("Ingrese la cantidad de lisiados de la semana: ");
   int lisiados = int.parse(stdin.readLineSync().toString());
+
+  while (lisiados <= 0) {
+    print("Valor Negativo No admitido como número de lisiados");
+
+    print("Ingrese la cantidad de Lisiados de la semana: ");
+    lisiados = int.parse(stdin.readLineSync().toString());
+  }
   
   //Declarando Variables
   var hombreSoltero = 0;
@@ -20,6 +27,12 @@ void main(List<String> args) {
     //Ingresando Sexo
     print("Ingrese el sexo del Lisiado ${i + 1}: 1. Hombre  2. Mujer");
     sexo = int.parse(stdin.readLineSync().toString());
+
+    while (sexo != 1 && sexo != 2) {
+      print("Ingrese los datos Validos");
+      print("Ingrese el sexo del Lisiado ${i + 1}: 1. Hombre  2. Mujer");
+      sexo = int.parse(stdin.readLineSync().toString());
+    }
     if (sexo == 1) {
       hombres++;
     }
@@ -28,6 +41,13 @@ void main(List<String> args) {
         "Ingrese el estado civil del Lisiado # ${i + 1}: 1. Soltero  2. Casado 3. Viudo");
 
     estCivil = int.parse(stdin.readLineSync().toString());
+    
+    while (3 < estCivil || estCivil <= 0) {
+      print("Ingrese los datos Validos");
+      print("Ingrese el estado civil del Lisiado # ${i + 1}: 1. Soltero  2. Casado 3. Viudo");
+
+      estCivil = int.parse(stdin.readLineSync().toString());
+    }
 
     if (estCivil == 1 && sexo == 2) {
       mujerSoltera++;
