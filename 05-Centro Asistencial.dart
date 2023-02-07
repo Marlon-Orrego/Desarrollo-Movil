@@ -50,12 +50,12 @@ void main(List<String> args) {
     }
   }
   var calcProm = ((hombreSoltero * 100) / hombres);
-  print("El porcentaje de hombres solteros es de: $calcProm");
+  print("El porcentaje de los hombres solteros es de: $calcProm");
 
   var calcEdad = edadPromedio / hombresCasados;
   print("La edad promedio de los hombres casados es de: $calcEdad");
 
   var calcMujeresSolteras = ((mujerSoltera * 100) / personasSolteras);
   print(
-      "El porcebtaje de mujeres solteras en relacion a las personas solteras es de: $calcMujeresSolteras");
+      "El porcentaje de mujeres solteras frente a las personas solteras es de: $calcMujeresSolteras");
 }
